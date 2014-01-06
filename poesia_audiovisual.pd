@@ -1,4 +1,4 @@
-#N canvas 617 61 679 630 24;
+#N canvas 555 39 679 630 24;
 #N canvas 388 55 1091 684 carregaaudio_analise_de_audio 0;
 #X obj 67 257 readsf~;
 #X msg 150 194 open dub.wav;
@@ -114,7 +114,7 @@
 #X connect 52 0 49 0;
 #X restore 212 166 pd carregaaudio_analise_de_audio;
 #N canvas 605 54 589 668 mostra_poesia 1;
-#X obj 17 39 gemhead;
+#X obj 17 45 gemhead;
 #X obj 17 267 translateXYZ;
 #X obj 19 602 text3d;
 #N canvas 779 99 443 602 posicionamento_frase1 0;
@@ -250,25 +250,27 @@
 #X obj 100 306 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 18 181 alpha;
-#X obj 20 87 color 0 1 0 0.5;
-#X floatatom 282 49 5 0 1 0 - - -;
-#X obj 285 29 hsl 64 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6200 1;
+#X obj 17 87 color 0 1 0 0.5;
+#X floatatom 179 20 5 0 1 0 - - -;
+#X obj 182 0 hsl 64 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6300 1;
 #X msg 70 139 1;
 #X obj 254 495 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 136 492 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 239 81 0 0 0 \$1;
+#X msg 179 52 0 0 0 \$1;
 #X msg 138 140 0;
 #X text 68 112 fundo preto;
 #X text 180 140 fundo branco;
 #X obj 18 452 scaleXYZ;
 #X obj 214 388 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6800 1;
-#X obj 512 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 464 4 r bonk;
+-1 -1 4000 1;
+#X obj 477 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 477 113 r bonk;
+#X obj 360 -10 loadbang;
+#X msg 360 28 1;
 #X connect 0 0 11 0;
 #X connect 1 0 7 0;
 #X connect 3 0 1 1;
@@ -300,6 +302,9 @@
 #X connect 23 0 16 0;
 #X connect 23 0 15 0;
 #X connect 24 0 23 0;
+#X connect 25 0 26 0;
+#X connect 25 0 18 0;
+#X connect 26 0 13 0;
 #X restore 213 266 pd mostra_poesia;
 #X text 214 80 controles: toca + carrega outro som;
 #X text 213 229 controles: carrega outra poesia(txt);
@@ -312,10 +317,14 @@
 #X obj 213 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 465 117 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 200 1;
+-1 -1 0 1;
+#X obj 107 364 loadbang;
+#X msg 113 400 1;
 #X connect 5 0 4 0;
 #X connect 6 0 4 0;
 #X connect 7 0 8 0;
 #X connect 8 0 4 0;
 #X connect 9 0 0 0;
 #X connect 10 0 0 2;
+#X connect 11 0 12 0;
+#X connect 12 0 7 0;
